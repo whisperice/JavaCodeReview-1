@@ -24,8 +24,9 @@ public class ResultWriterServiceImplToScreen implements ResultWriterService {
 
             Map<Bundle, Integer> consumedBundles = processedOrder.getConsumedBundles();
             for (Bundle bundle : consumedBundles.keySet()) {
-                System.out.printf("\t%d x %s $%.2f" + LINE_BREAK, consumedBundles.get(bundle), bundle.getSize(),
-                                  bundle.getPrice());
+                int numberOfBundle = consumedBundles.get(bundle);
+                System.out.printf("\t%d x %s $%.2f" + LINE_BREAK, numberOfBundle, bundle.getSize(),
+                                  bundle.getPrice() * numberOfBundle);
             }
         }
     }

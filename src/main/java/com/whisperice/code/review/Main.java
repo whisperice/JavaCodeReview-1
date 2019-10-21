@@ -5,7 +5,6 @@ import com.whisperice.code.review.processor.OrderProcessor;
 import com.whisperice.code.review.service.MediaBundleReader;
 import com.whisperice.code.review.service.OrderReader;
 import com.whisperice.code.review.service.ResultWriterService;
-import com.whisperice.code.review.service.impl.ResultWriterServiceImplToScreen;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -17,8 +16,7 @@ public class Main {
         try {
             ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
             OrderReader orderReader = (OrderReader) applicationContext.getBean("orderReader");
-            ResultWriterService resultWriter = (ResultWriterServiceImplToScreen) applicationContext.getBean(
-                    "resultWriterService");
+            ResultWriterService resultWriter = (ResultWriterService) applicationContext.getBean("resultWriterService");
 
             MediaBundleReader.load("MediaBundles.txt");
             orderReader.load("Orders.txt");
