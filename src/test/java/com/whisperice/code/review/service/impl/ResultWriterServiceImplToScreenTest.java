@@ -35,5 +35,7 @@ public class ResultWriterServiceImplToScreenTest {
         assertEquals(800.0, processedOrder.get(0).getTotalCost());
         assertEquals(1957.5, processedOrder.get(1).getTotalCost());
         assertEquals(2370.0, processedOrder.get(2).getTotalCost());
+        assertEquals(2040.0, processedOrder.get(3).getTotalCost());
+        assertEquals(2940.0, processedOrder.get(4).getTotalCost());
     }
 }
