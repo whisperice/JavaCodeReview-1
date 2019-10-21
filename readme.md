@@ -7,5 +7,6 @@ Input should be stored in CodeReview-1\src\main\resources\Orders.txt.
 
 Output can be displayed on screen or stored in file(to be implemented).
 
-## Bugs exist 
-May not finish the whole order. Will fix it later.
+## Bugs
+ 
+Update: Bugs causing order unfinished has been fixed. Pass the 3 input case.
